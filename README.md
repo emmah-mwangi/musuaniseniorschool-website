@@ -40,7 +40,7 @@ musuaniseniorschool-website/
 └── CNAME                                  Custom domain configuration
 ```
 
-   🚀 Getting Started
+    Getting Started
 
      Frontend Only
 Simply open any `.html` file in your web browser to view the pages.
@@ -74,7 +74,7 @@ The website includes a Node.js backend for handling contact form submissions. Fo
 5.   Access the website:  
    Open your browser and navigate to:
    ```
-   http://localhost:3000
+ [https://www.musuaniseniorschool.co.ke]
    ```
 
     Contact Form Features
