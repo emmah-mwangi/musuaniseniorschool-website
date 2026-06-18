@@ -3,801 +3,527 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | MUSUANI SENIOR SCHOOL </title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-</head>
+  <title>Home | Musuani Senior School</title>
+  <meta name="description" content="Official website of Musuani Senior School - Kenya's premier institution for competency-based senior education.">
+  <meta name="keywords" content="Musuani Senior School, CBE, Education, Kenya, Kitui">
+  
+  <!-- Bootstrap 5.3.2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <style>
+    :root {
+      --primary-color: #0a2a52;
+      --secondary-color: #3f4aa8;
+      --light-bg: #f4f6f9;
+      --text-dark: #333;
+    }
+
     body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f6f9;
-  padding: 0;
-}
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
 
-/* Top Navigation Bar */
-.navbar {
-  background-color: #0a2a52; /* dark blue */
-  overflow: hidden;
-  padding: 12px 20px;
-}
+    /* Navigation Bar */
+    .navbar-custom {
+      background-color: var(--primary-color);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
 
-/* Logo / School Name */
-.navbar .school-name {
-  float: left;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-right: 40px;
-}
+    .navbar-custom a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 10px 18px;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
 
-/* Navigation Links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white; /* visible text color */
-  text-align: center;
-  padding: 10px 18px;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
+    .navbar-custom a:first-child {
+      font-weight: bold;
+      margin-right: 40px;
+    }
 
-.navbar a:hover {
-  background-color: #163d73; /* lighter blue on hover */
-}
+    .navbar-custom a:hover,
+    .navbar-custom a.active {
+      background-color: #163d73;
+    }
 
-/* Clear floats */
-.navbar::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+    /* Carousel */
+    .carousel-container {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+      margin: 0;
+    }
 
-/* Main content */
-.main-content {
-  padding: 30px;
-}
+    .carousel-slide {
+      width: 100%;
+      height: 100%;
+      display: none;
+      animation: fade 1s ease-in-out;
+    }
 
-.main-content h1 {
-  color: #0a2a52;
-}
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-.main-content p {
-  color: #333;
-  line-height: 1.6;
-}
+    .carousel-slide.active {
+      display: block;
+    }
 
-/* Carousel */
-.carousel-container {
-  width: 100%; /* full page width */
-  height: 400px; /* fixed height */
-  margin: 0 auto; /* flush with navbar */
-  overflow: hidden; /* hide anything outside */
-  position: relative;
-}
+    @keyframes fade {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
 
-.carousel-slide {
-  width: 100%;
-  height: 100%; /* make slide fill container completely */
-  display: none; /* hide by default */
-}
+    /* Welcome Section */
+    .welcome-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      background: #f7f8fc;
+      padding: 40px;
+      border-radius: 8px;
+    }
 
-.carousel-slide img {
-  width: 100%;
-  height: 100%; /* fill the container exactly */
-  object-fit: cover; /* maintain aspect ratio, crop if needed */
-  display: block;
-  border-radius: 0px;
-}
+    .welcome-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
 
-/* Show active slide */
-.carousel-slide.active {
-  display: block;
-  animation: fade 1s ease-in-out;
-}
+    .welcome-text {
+      flex: 1;
+      min-width: 300px;
+    }
 
-/* Optional fade animation */
-@keyframes fade {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
-}
+    .welcome-title {
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
 
-/* Welcome Section */
-.welcome-section {
-  max-width: 1200px;
-  margin: 40px auto;
-  background: #f7f8fc;
-  padding: 40px;
-}
+    .welcome-para {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+    }
 
-.welcome-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
+    .welcome-carousel {
+      flex: 1;
+      height: 350px;
+      overflow: hidden;
+      position: relative;
+      min-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
 
-.welcome-text {
-  width: 55%;
-}
+    .welcome-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
 
-.welcome-title {
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  color: #000;
-}
+    .welcome-slide.active {
+      opacity: 1;
+    }
 
-.welcome-para {
-  font-size: 17px;
-  line-height: 1.8;
-  color: #3f4aa8;
-  margin-bottom: 15px;
-}
+    .welcome-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.welcome-para2 {
-  font-size: 17px;
-  line-height: 1.8;
-  color: #3f4aa8;
-}
+    /* Hero Section */
+    .hero {
+      padding: 30px;
+      text-align: center;
+      background-color: #fff;
+    }
 
-.welcome-carousel {
-  width: 50%;
-  height: 350px;
-  overflow: hidden;
-  position: relative;
-}
+    .hero h1 {
+      color: var(--primary-color);
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
 
-.welcome-slide {
-  position: absolute;
-  inset: 0;
-}
+    .hero p {
+      color: var(--text-dark);
+      line-height: 1.6;
+      font-size: 18px;
+    }
 
-.welcome-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    /* Section */
+    .section {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+    }
 
-/* education Slides */
-.education-slide {
-  position: absolute;
-  inset: 0;
-}
+    .section h2 {
+      color: var(--primary-color);
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      font-weight: 700;
+    }
 
-.education-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    /* FAQ Section */
+    .faq-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
 
-/* Hero Section */
-.hero {
-  padding: 30px;
-  text-align: center;
-  background-color: #fff;
-}
+    .faq-item {
+      background: #fff;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
 
-.hero h1 {
-  color: #0a2a52;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
+    .faq-toggle {
+      width: 100%;
+      padding: 18px 20px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
 
-.hero p {
-  color: #333;
-  line-height: 1.6;
-  font-size: 18px;
-}
+    .faq-toggle:hover {
+      background: #163d73;
+    }
 
-/* Section */
-.section {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-}
+    .faq-toggle.active {
+      background: #163d73;
+    }
 
-.section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    .faq-icon {
+      transition: transform 0.3s ease;
+      font-size: 20px;
+    }
 
-.section h2 {
-  color: #0a2a52;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
+    .faq-icon.active {
+      transform: rotate(180deg);
+    }
 
-.section p {
-  color: #333;
-  line-height: 1.6;
-  font-size: 16px;
-}
+    .faq-answer {
+      display: none;
+      padding: 20px;
+      color: #555;
+      line-height: 1.8;
+      background: #f9f9f9;
+      overflow: hidden;
+      max-height: 0;
+      transition: all 0.3s ease;
+    }
 
-/* Footer */
-footer {
-  background-color: #0a2a52;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
+    .faq-answer.active {
+      display: block;
+      max-height: 500px;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--primary-color);
+      color: white;
+      padding: 40px 20px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 20px;
+    }
+
+    .footer h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .footer a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .welcome-flex {
+        flex-direction: column;
+      }
+      .welcome-text {
+        width: 100%;
+      }
+      .welcome-carousel {
+        width: 100%;
+      }
+      .welcome-title {
+        font-size: 28px;
+      }
+      .navbar-custom a:first-child {
+        margin-right: auto;
+      }
+    }
+
+    /* Animations */
+    .fade-in {
+      animation: slideIn 0.6s ease;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
-  <div class="navbar">
-    <a href="#" class="school-name">MUSUANI SENIOR SCHOOL</a>
-    <a href="index.html">Home</a>
+  <!-- Navbar -->
+  <nav class="navbar-custom">
+    <a href="#">MUSUANI SENIOR SCHOOL</a>
+    <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="academics.html">Academics</a>
     <a href="admissions.html">Admissions</a>
     <a href="contact_details.html">Contact Us</a>
-  </div>
+  </nav>
 
-<section class="top-carousel">
+  <!-- Carousel -->
   <div class="carousel-container">
-
+    <div class="carousel-slide active">
+      <img src="https://i.ibb.co/0RQ0HQfW/ADMINBLOCK1.jpg" alt="Musuani Senior School">
+    </div>
     <div class="carousel-slide">
-    <img src="https://i.ibb.co/gbgmRS1n/gate1.jpg" alt="slide1" border="0" class="carousel-image">
-      <div class="carousel-caption">
-      </div>
+      <img src="https://i.ibb.co/0VC1X2fP/DORM1.jpg" alt="Student Dormitory">
     </div>
-
     <div class="carousel-slide">
-      <img src="https://i.ibb.co/sJFX9kH8/adminb.jpg" alt="MUS2" border="0" class="carousel-image">
-      <div class="carousel-caption">
-      </div>
+      <img src="https://i.ibb.co/0pmBdq1G/ADMINBLOCK3.jpg" alt="School Campus">
     </div>
-
     <div class="carousel-slide">
-      <img src="https://i.ibb.co/bMyjndKV/MUS4.jpg" alt="MUS4" border="0" class="carousel-image">
+      <img src="https://i.ibb.co/bjvXRcYp/ADMINBLOCK4.jpg" alt="School Facilities">
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Welcome to Musuani Senior School</h1>
+    <p>Empowering students through Competency-Based Education (CBE)</p>
+  </div>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+    <div class="welcome-flex">
+      <div class="welcome-text" data-animate>
+        <h2 class="welcome-title">About Our School</h2>
+        <p class="welcome-para">
+          Musuani Senior School is a leading institution committed to providing quality, competency-based education that nurtures academic excellence, discipline, and holistic learner development.
+        </p>
+        <p class="welcome-para">
+          Our school motto, "Shine and Reflect," embodies our commitment to developing well-rounded students who excel academically and contribute meaningfully to society.
+        </p>
+      </div>
+      <div class="welcome-carousel">
+        <div class="welcome-slide active">
+          <img src="https://i.ibb.co/wffGKv2/MUSK1.jpg" alt="School Building">
+        </div>
+        <div class="welcome-slide">
+          <img src="https://i.ibb.co/rGhvZBvm/MUSK2.jpg" alt="School Compound">
+        </div>
+        <div class="welcome-slide">
+          <img src="https://i.ibb.co/r2J56YLv/computer-lab.jpg" alt="Computer Lab">
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- Education Pathways -->
+  <section class="section">
+    <h2>Our Learning Pathways</h2>
+    <div class="container-lg">
+      <div class="row g-4">
+        <div class="col-md-4" data-animate>
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title text-primary">STEM Pathway</h5>
+              <p class="card-text">Science, Technology, Engineering, and Mathematics programs designed for students interested in scientific advancement.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-animate>
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Social Sciences Pathway</h5>
+              <p class="card-text">Humanities and social sciences education for students exploring human behavior and society.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-animate>
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Arts & Sports Science</h5>
+              <p class="card-text">Creative and athletic pathways for students passionate about arts, culture, and physical education.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <script>
-  const topSlides = document.querySelectorAll('.carousel-slide');
-  let currentIndex = 0;
-
-  function showSlide(index) {
-    topSlides.forEach(slide => slide.classList.remove('active'));
-    topSlides[index].classList.add('active');
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % topSlides.length;
-    showSlide(currentIndex);
-  }
-
-  // Make sure first slide is visible immediately
-  showSlide(currentIndex);
-
-  // Change slide every 10 seconds
-  setInterval(nextSlide, 10000);
-</script>
-  </div>
-</section>
-
-<script src="assets/js/carousel.js"></script>
-<!-- ===== Welcome Section ===== -->
-<section style="
-    max-width:1200px;
-    margin:40px auto;
-    background:#f7f8fc;
-    padding:40px;
-">
-
-  <!-- FLEX CONTAINER -->
-  <div style="
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:30px;
-  ">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- ===== LEFT: TEXT ===== -->
-    <div style="width:55%;">
-      <h1 style="
-          font-size:42px;
-          font-weight:800;
-          margin-bottom:20px;
-          color:#000;
-      ">
-        Welcome to Musuani<br>Senior  School
-      </h1>
-
-      <p style="
-          font-size:17px;
-          line-height:1.8;
-          color:#3f4aa8;
-          margin-bottom:15px;
-      ">
-        A public mixed Senior school categorized as C2 under the
-        Competency-Based Education (CBE) education. We are dedicated to
-        empowering our students through quality education, discipline,
-        and integrity.
-      </p>
-
-      <p style="
-          font-size:17px;
-          line-height:1.8;
-          color:#3f4aa8;
-      ">
-        Browse through our website to learn more about our academics,
-        co-curricular activities, staff, and vibrant school community.
-      </p>
-    </div>
-
-    <!-- ===== RIGHT: IMAGE CAROUSEL ===== -->
-    <div style="
-        width:50%;
-        height:350px;
-        overflow:hidden;
-        position:relative;
-    ">
-
-      <!-- SLIDES -->
-      <div class="welcome-slide" style="position:absolute; inset:0;">
-        <img src="https://i.ibb.co/0RQ0HQfW/ADMINBLOCK1.jpg" alt="Musuani Senior School Administration Block"
-             style="width:100%; height:100%; object-fit:cover;">
+  <!-- FAQ Section -->
+  <section class="section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-section">
+      <div class="faq-item">
+        <button class="faq-toggle" onclick="toggleFAQ(0)">
+          <span>What is Competency-Based Education (CBE)?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          CBE is an educational approach that focuses on students demonstrating mastery of specific competencies rather than spending a set amount of time in a classroom. Students progress at their own pace.
+        </div>
       </div>
 
-      <div class="welcome-slide" style="position:absolute; inset:0; display:none;">
-        <img src="https://i.ibb.co/R46xRNZN/ADMINBLOCK2.jpg" alt="Musuani Senior School Administration Building"
-             style="width:100%; height:100%; object-fit:cover;">
-      </div>
-      <div class="welcome-slide" style="position:absolute; inset:0; display:none;">
-        <img src="https://i.ibb.co/0pmBdq1G/ADMINBLOCK3.jpg" alt="Musuani Senior School Campus View"
-             style="width:100%; height:100%; object-fit:cover;">
-      </div>
-
-      <div class="welcome-slide" style="position:absolute; inset:0; display:none;">
-        <img src="https://i.ibb.co/bjvXRcYp/ADMINBLOCK4.jpg" alt="Musuani Senior School Facilities"
-             style="width:100%; height:100%; object-fit:cover;">
+      <div class="faq-item">
+        <button class="faq-toggle" onclick="toggleFAQ(1)">
+          <span>When are admissions for new students?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Admissions typically occur in January and June. For specific dates and requirements, please visit our Admissions page or contact us directly.
+        </div>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- ===== AUTO CAROUSEL SCRIPT ===== -->
-<script>
-  let slides = document.querySelectorAll('.welcome-slide');
-  let index = 0;
-
-  setInterval(() => {
-    slides[index].style.display = "none";
-    index = (index + 1) % slides.length;
-    slides[index].style.display = "block";
-  }, 10000); // 10 seconds
-</script>
-
-<>
-<!-- HERO SECTION -->
-<section class="hero">
-  <h1>Excellence in Education and Character</h1>
-  <p>
-    Providing quality, competency-based education that nurtures academic excellence,
-    discipline, and responsible citizenship.
-  </p>
-  <!-- ===== Our education Section ===== -->
-<section style="
-    max-width:1200px;
-    margin:60px auto;
-    padding:40px;
-    background:#ffffff;
-">
-
-  <div style="
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:40px;
-  ">
-
-    <!-- ===== LEFT: TEXT CONTENT ===== -->
-    <div style="width:55%;">
-      <h2 style="
-          font-size:34px;
-          font-weight:800;
-          margin-bottom:20px;
-          color:#000;
-      ">
-        Our education
-      </h2>
-
-      <p style="
-          font-size:17px;
-          line-height:1.8;
-          color:#3f4aa8;
-          margin-bottom:15px;
-      ">
-        Our school implements the Competency-Based education (CBE) as approved by
-        the Ministry of Education. The education is designed to equip learners
-        with practical skills, values, and competencies required for academic
-        success and lifelong learning.
-      </p>
-
-      <p style="
-          font-size:17px;
-          line-height:1.8;
-          color:#3f4aa8;
-      ">
-        We offer Senior School education under CBE system, with a
-        strong focus on academic achievement, talent development, and career
-        preparedness.
-      </p>
-    </div>
-
-    <!-- ===== RIGHT: IMAGE CAROUSEL ===== -->
-    <div style="
-        width:45%;
-        height:320px;
-        position:relative;
-        overflow:hidden;
-    ">
-
-      <div class="education-slide" style="position:absolute; inset:0;">
-        <img src="https://i.ibb.co/b5VVgMR1/CBE.jpg"
-             alt="CBE Learning"
-             style="width:100%; height:100%; object-fit:cover;">
+      <div class="faq-item">
+        <button class="faq-toggle" onclick="toggleFAQ(2)">
+          <span>What are the entry requirements?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Students must have completed their primary education and meet the minimum entry grades set by the school and Ministry of Education. Contact us for specific grade requirements.
+        </div>
       </div>
 
-      <div class="education-slide" style="display:none;">
-        <img src="https://i.ibb.co/Vp9BhT31/CBE1.png"
-             alt="Senior Senior">
+      <div class="faq-item">
+        <button class="faq-toggle" onclick="toggleFAQ(3)">
+          <span>Does the school offer boarding facilities?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes, Musuani Senior School operates as both a day and boarding school. Students can choose the option that best suits their needs.
+        </div>
       </div>
 
-      <div class="education-slide" style="display:none;">
-        <img src="https://i.ibb.co/JwWq84JQ/KNECCBE.jpg"
-             alt="Senior Senior">
+      <div class="faq-item">
+        <button class="faq-toggle" onclick="toggleFAQ(4)">
+          <span>What co-curricular activities are available?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          We offer a variety of clubs and activities including sports, music, debate, science clubs, and cultural activities to ensure holistic development.
+        </div>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== AUTO CAROUSEL SCRIPT ===== -->
-<script>
-  let educationSlides = document.querySelectorAll('.education-slide');
-  let educationIndex = 0;
-
-  setInterval(() => {
-    educationSlides[educationIndex].style.display = "none";
-    educationIndex = (educationIndex + 1) % educationSlides.length;
-    educationSlides[educationIndex].style.display = "block";
-  }, 8000); // changes every 8 seconds
-</script>
-
-</section>
-<section style="max-width:1200px; margin:60px auto; padding:40px; background:#ffffff;">
-
-  <h2 style="
-      font-size:34px;
-      font-weight:800;
-      margin-bottom:15px;
-      color:#000;
-      text-align:center;
-  ">
-    Transition to the Competency-Based Education (CBE)
-  </h2>
-
-  <p style="
-      font-size:17px;
-      line-height:1.8;
-      color:#3f4aa8;
-      max-width:900px;
-      margin:0 auto;
-      text-align:center;
-  ">
-    As Kenya embraces the Competency-Based education, Musuani Senior School is
-    actively preparing to align our teaching approaches and facilities with this
-    new system. We believe in equipping students with future-ready skills while
-    maintaining our tradition of academic excellence. As the first batch of
-    Grade 10 joins us in 2026, we are excited to welcome them.
-  </p>
-
-</section>
-<section style="max-width:1200px; margin:40px auto; padding:20px;">
-
-  <h2 style="
-      font-size:30px;
-      font-weight:800;
-      margin-bottom:30px;
-      text-align:center;
-  ">
-    CBE Learning Pathways
-  </h2>
-  
-  <div style="
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-      gap:25px;
-  ">
-
-    <!-- STEM -->
-    <div style="background:#f7f8fc; padding:25px;">
-      <h3 style="font-size:22px; margin-bottom:10px;">STEM</h3>
-      <ul style="color:#3f4aa8; line-height:1.8;">
-        <li>Pure Sciences Track</li>
-        <li>Applied Sciences Track</li>
-        <li>Technical Studies Track</li>
-      </ul>
-    </div>
-
-    <!-- Social Sciences -->
-    <div style="background:#f7f8fc; padding:25px;">
-      <h3 style="font-size:22px; margin-bottom:10px;">Social Sciences</h3>
-      <ul style="color:#3f4aa8; line-height:1.8;">
-        <li>Languages & Literature Track</li>
-        <li>Humanities & Business Studies Track</li>
-      </ul>
-    </div>
-
-    <!-- Arts & Sports -->
-    <div style="background:#f7f8fc; padding:25px;">
-      <h3 style="font-size:22px; margin-bottom:10px;">Arts & Sports Science</h3>
-      <ul style="color:#3f4aa8; line-height:1.8;">
-        <li>Arts Track</li>
-        <li>Sports Track</li>
-      </ul>
-    </div>
-
-  </div>
-
-</section>
-<section style="max-width:1200px; margin:60px auto; padding:20px;">
-
-  <div style="
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-      gap:20px;
-  ">
-
-    <div style="background:#0a2a52; color:#fff; padding:25px;">
-      <h3>Learn More About CBE</h3>
-      <p style="line-height:1.6;">Understand the new education framework.</p>
-    </div>
-
-    <div style="background:#0a2a52; color:#fff; padding:25px;">
-      <h3>Admissions</h3>
-      <p style="line-height:1.6;">Join Musuani Senior School.</p>
-    </div>
-    <div style="background:#0a2a52; color:#fff; padding:25px;">
-      <h3>Fee Structure</h3>
-      <p style="line-height:1.6;">View our transparent fees.</p>
-    </div>
-
-    <div style="background:#0a2a52; color:#fff; padding:25px;">
-      <h3>K.C.S.E Results</h3>
-      <p style="line-height:1.6;">See our outstanding performance.</p>
-    </div>
-
-    <div style="background:#0a2a52; color:#fff; padding:25px;">
-      <h3>Upcoming Events</h3>
-      <p style="line-height:1.6;">See what’s happening at our school.</p>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ===== FAQ SECTION ===== -->
-<section style="
-    max-width:1100px;
-    margin:70px auto;
-    padding:40px;
-    background:#f7f8fc;
-">
-
-  <h2 style="
-      font-size:34px;
-      font-weight:800;
-      text-align:center;
-      margin-bottom:10px;
-  ">
-    Frequently Asked Questions
-  </h2>
-
-  <p style="
-      text-align:center;
-      color:#3f4aa8;
-      font-size:16px;
-      margin-bottom:40px;
-  ">
-    Find quick answers about admissions, fees, school life, and more.
-  </p>
-
-  <!-- FAQ ITEM -->
-  <div class="faq-item" style="margin-bottom:15px;">
-    <div onclick="toggleFAQ(0)" style="
-        background:#ffffff;
-        padding:18px 20px;
-        cursor:pointer;
-        font-weight:600;
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-    ">
-      How do I apply for Grade 10 placement in 2026?
-      <span id="icon0">+</span>
-    </div>
-    <div class="faq-answer" style="display:none; padding:15px 20px; color:#3f4aa8;">
-      Applications are conducted through the Ministry of Education placement
-      system. Further guidance will be provided by the school once the official
-      placement window opens.
-    </div>
-  </div>
-
-  <div class="faq-item" style="margin-bottom:15px;">
-    <div onclick="toggleFAQ(1)" style="background:#ffffff; padding:18px 20px; cursor:pointer; font-weight:600; display:flex; justify-content:space-between;">
-      Which pathways and elective tracks are available under the CBE?
-      <span id="icon1">+</span>
-    </div>
-    <div class="faq-answer" style="display:none; padding:15px 20px; color:#3f4aa8;">
-      We offer STEM, Social Sciences, and Arts & Sports Science pathways, each
-      with well-defined elective tracks.
-    </div>
-  </div>
-
-  <div class="faq-item" style="margin-bottom:15px;">
-    <div onclick="toggleFAQ(2)" style="background:#ffffff; padding:18px 20px; cursor:pointer; font-weight:600; display:flex; justify-content:space-between;">
-      What is the 2026 fee structure and how can I pay?
-      <span id="icon2">+</span>
-    </div>
-    <div class="faq-answer" style="display:none; padding:15px 20px; color:#3f4aa8;">
-      Our fee structure is approved by the Ministry of Education and payment
-      options will be communicated via official school channels.
-    </div>
-  </div>
-
-  <div class="faq-item" style="margin-bottom:15px;">
-    <div onclick="toggleFAQ(3)" style="background:#ffffff; padding:18px 20px; cursor:pointer; font-weight:600; display:flex; justify-content:space-between;">
-      How did our students perform in the 2025 KCSE exams?
-      <span id="icon3">+</span>
-    </div>
-    <div class="faq-answer" style="display:none; padding:15px 20px; color:#3f4aa8;">
-      Musuani Senior School recorded strong academic performance, reflecting
-      our commitment to quality teaching and learner support.
-        <img src="https://i.ibb.co/Kc20h5pk/kcse-results.jpg" alt="Musuani Senior School Campus View"
-             style="width:100%; height:100%; object-fit:cover;">
-      
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div onclick="toggleFAQ(4)" style="background:#ffffff; padding:18px 20px; cursor:pointer; font-weight:600; display:flex; justify-content:space-between;">
-      What clubs, sports teams, and extracurricular activities do we offer?
-      <span id="icon4">+</span>
-    </div>
-    <div class="faq-answer" style="display:none; padding:15px 20px; color:#3f4aa8;">
-      We offer a wide range of clubs, sports teams, and co-curricular activities
-      to support talent development and holistic growth.
-    </div>
-  </div>
-
-  <p style="text-align:center; margin-top:30px;">
-    Didn’t find what you’re looking for?
-    <a href="faq.html" style="color:#0a2a52; font-weight:600;">Visit our full FAQ section</a>
-  </p>
-
-</section>
-
-<!-- FAQ SCRIPT -->
-<script>
-  function toggleFAQ(index) {
-    let answers = document.querySelectorAll('.faq-answer');
-    let icons = document.querySelectorAll('[id^="icon"]');
-
-    answers.forEach((ans, i) => {
-      if (i === index) {
-        let isOpen = ans.style.display === "block";
-        ans.style.display = isOpen ? "none" : "block";
-        icons[i].textContent = isOpen ? "+" : "−";
-      } else {
-        ans.style.display = "none";
-        icons[i].textContent = "+";
-      }
-    });
-  }
-</script>
-<!-- ===== PARTNERS SECTION ===== -->
-<section style="
-    max-width:1100px;
-    margin:60px auto;
-    padding:40px;
-    text-align:center;
-">
-
-  <h2 style="
-      font-size:30px;
-      font-weight:800;
-      margin-bottom:30px;
-  ">
-    Our Partners
-  </h2>
-
-  <div style="
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:40px;
-      flex-wrap:wrap;
-  ">
-
-    <img src="https://i.ibb.co/v6MGMvv0/MOE.jpg"
-         alt="Ministry of Education" style="height:300px; width: 200px;">
-
-    <img src="https://i.ibb.co/xq554w0w/KNEC.jpg"
-         alt="KNEC" style="height:300px; width: 200px;">
-
-    <img src="https://i.ibb.co/MkXT55tn/TSC.jpg"
-         alt="TSC" style="height:300px; width: 200px;">
-
-    <img src="https://i.ibb.co/PvjJbYPp/KICD.jpg"
-         alt="KICD" style="height:300px; width: 200px;">
-  </div>
-
-</section>
-<footer style="background:#0a2a52; color:#ffffff; padding:40px 20px 20px;">
-    <div style="
-        max-width:1200px;
-        margin:0 auto;
-        display:flex;
-        justify-content:space-between;
-        align-items:flex-start;
-        flex-wrap:wrap;
-        gap:40px;
-    ">
-
-      <!-- School Info -->
-      <div style="flex:1; min-width:200px;">
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
         <h3>Musuani Senior School</h3>
-        <p><strong>School Motto:</strong> Shine and Reflect</p>
-        <p><strong>Mission:</strong> To become a model center for holistic development of the learner through self-discipline and provision of quality education.</p>
-        <p><strong>Vision:</strong> A model centre of excellence for holistic development</p>
-        <p><strong>Core Values:</strong> Integrity, Teamwork, Professionalism, Transparency, Accountability, Fidelity, Fairness, Hardwork, Commitment, Efficiency, Continual Improvement, Courtesy, Respect for individual differences, Innovation & Creativity</p>
+        <p><strong>Motto:</strong> Shine and Reflect</p>
+        <p><strong>Mission:</strong> To become a model center for holistic development of the learner.</p>
       </div>
-
-      <!-- Quick Links -->
-      <div style="flex:1; min-width:200px;">
+      <div>
         <h3>Quick Links</h3>
-        <ul style="list-style:none; padding:0; line-height:1.9;">
-          <li><a href="https://kuccps.net" style="color:#ffffff; text-decoration:none;">KUCCPS</a></li>
-          <li><a href="https://www.knec.ac.ke" style="color:#ffffff; text-decoration:none;">KNEC Portal</a></li>
-          <li><a href="https://www.tsc.go.ke" style="color:#ffffff; text-decoration:none;">TSC Portal</a></li>
-          <li><a href="index.html" style="color:#ffffff; text-decoration:none;">Home</a></li>
-          <li><a href="contact_details.html" style="color:#ffffff; text-decoration:none;">Contact Us</a></li>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="https://kuccps.net" target="_blank">KUCCPS Portal</a></li>
+          <li><a href="https://www.knec.ac.ke" target="_blank">KNEC Portal</a></li>
+          <li><a href="https://www.tsc.go.ke" target="_blank">TSC Portal</a></li>
+          <li><a href="contact_details.html">Contact Us</a></li>
         </ul>
       </div>
-
-      <!-- Contact Info -->
-      <div style="flex:1; min-width:200px;">
+      <div>
         <h3>Contact Information</h3>
-        <p>Address:647-90400</p>
-        <p>Email: musuani.sec@gmail.com</p>
-        <p>Phone: 0722242293</p>
+        <p>📞 Phone: 0722242293</p>
+        <p>📧 Email: musuani.sec@gmail.com</p>
+        <p>📍 Address: 647-90400, Mwingi West, Kitui</p>
       </div>
-
     </div>
-
-    <div style="border-top:1px solid rgba(255,255,255,0.3); text-align:center; padding:15px; font-size:14px; margin-top:20px;">
-      © 2026 Musuani Senior School. All rights reserved.<br>
-      Powered by <a href="mailto:mwangiemmah2023@gmail.com" style="color:#ffffff; text-decoration:none; font-weight:600;">Service Provider</a>
+    <div style="border-top: 1px solid rgba(255,255,255,0.3); text-align: center; padding: 15px; font-size: 14px;">
+      © 2026 Musuani Senior School. All rights reserved. | Powered by <a href="mailto:mwangiemmah2023@gmail.com" style="color: #ddd;">Mwangi Emma</a>
     </div>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/form-validation.js"></script>
+
+  <script>
+    // Initialize carousels
+    document.addEventListener('DOMContentLoaded', function() {
+      // Main carousel
+      const mainSlides = document.querySelectorAll('.carousel-container .carousel-slide');
+      let currentSlide = 0;
+      setInterval(() => {
+        mainSlides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % mainSlides.length;
+        mainSlides[currentSlide].classList.add('active');
+      }, 5000);
+
+      // Welcome carousel
+      const welcomeSlides = document.querySelectorAll('.welcome-carousel .welcome-slide');
+      let welcomeCurrent = 0;
+      setInterval(() => {
+        welcomeSlides[welcomeCurrent].classList.remove('active');
+        welcomeCurrent = (welcomeCurrent + 1) % welcomeSlides.length;
+        welcomeSlides[welcomeCurrent].classList.add('active');
+      }, 8000);
+    });
+  </script>
+</body>
 </html>
-
-
-
-
-
-

@@ -3,237 +3,328 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Musuani Senior School - Contact Us</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Musuani Senior School</title>
+  <meta name="description" content="Contact Musuani Senior School. Get in touch with us for inquiries and information.">
+  
+  <!-- Bootstrap 5.3.2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #0a2a52;
+      --secondary-color: #3f4aa8;
+    }
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f2f5f8;
+      color: #000;
+    }
 
+    .navbar-custom {
+      background: var(--primary-color);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar-custom a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 10px 18px;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .navbar-custom a:first-child {
+      margin-right: 40px;
+    }
+
+    .navbar-custom a:hover,
+    .navbar-custom a.active {
+      background-color: #163d73;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .contact-card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .contact-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .contact-card p {
+      line-height: 1.7;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 5px rgba(10,42,82,0.2);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-check {
+      margin-bottom: 10px;
+    }
+
+    .form-check input {
+      width: auto;
+      margin-right: 8px;
+    }
+
+    .submit-btn {
+      background: var(--primary-color);
+      color: #ffffff;
+      padding: 12px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background: #163d73;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(10,42,82,0.3);
+    }
+
+    .map-container {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin-top: 30px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .footer {
+      background: var(--primary-color);
+      color: #ffffff;
+      padding: 40px 20px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 20px;
+    }
+
+    .footer a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-custom a:first-child {
+        margin-right: auto;
+      }
+    }
+  </style>
 </head>
-<body style="margin:0; font-family:Arial, Helvetica, sans-serif; background:#f2f5f8; color:#000;">
+<body>
 
-  <!-- ================= NAVBAR ================= -->
-  <div style="background:#0a2a52; overflow:hidden;">
-    <a href="#" style="
-      float:left; display:block; color:white; text-align:center;
-      padding:10px 18px; text-decoration:none; font-size:16px;
-      border-radius:5px; transition:background 0.3s;
-      font-weight:bold;
-    ">MUSUANI Senior SCHOOL</a>
-    <a href="index.html" style="
-      float:left; display:block; color:white; text-align:center;
-      padding:10px 18px; text-decoration:none; font-size:16px;
-      border-radius:5px; transition:background 0.3s;
-    ">Home</a>
-    <a href="about.html" style="
-      float:left; display:block; color:white; text-align:center;
-      padding:10px 18px; text-decoration:none; font-size:16px;
-      border-radius:5px; transition:background 0.3s;
-    ">About</a>
-    <a href="academics.html" style="
-      float:left; display:block; color:white; text-align:center;
-      padding:10px 18px; text-decoration:none; font-size:16px;
-      border-radius:5px; transition:background 0.3s;
-    ">Academics</a>
-    <a href="admissions.html" style="
-      float:left; display:block; color:white; text-align:center;
-      padding:10px 18px; text-decoration:none; font-size:16px;
-      border-radius:5px; transition:background 0.3s;
-    ">Admissions</a>
-    <a href="contact_details.html" style="
-      float:left; display:block; color:white; text-align:center;
-      padding:10px 18px; text-decoration:none; font-size:16px;
-      border-radius:5px; transition:background 0.3s;
-    ">Contact Us</a>
+  <!-- Navbar -->
+  <div class="navbar-custom">
+    <a href="#">MUSUANI SENIOR SCHOOL</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academics.html">Academics</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="contact_details.html" class="active">Contact Us</a>
   </div>
-  <!-- ================= CONTACT US SECTION ================= -->
-  <section style="max-width:1200px; margin:50px auto; padding:40px 20px;">
 
-    <!-- Section Title -->
-    <h2 style="text-align:center; font-size:32px; margin-bottom:40px; color:#0a2a52;">
+  <!-- Contact Section -->
+  <section style="max-width:1200px; margin:50px auto; padding:40px 20px;">
+    <h2 style="text-align:center; font-size:32px; margin-bottom:40px; color:var(--primary-color);">
       Contact Us
     </h2>
 
-    <!-- GRID: Contact Info + Form -->
-    <div style="
-        display:grid;
-        grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
-        gap:30px;
-    ">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-      <!-- CARD 1: Contact Details -->
-      <div style="
-          background:#ffffff;
-          padding:25px;
-          border-radius:12px;
-          box-shadow:0 6px 12px rgba(0,0,0,0.1);
-      ">
-        <h3 style="color:#0a2a52; margin-bottom:15px;">Reach Us Through</h3>
-        <p style="line-height:1.7; color:#3f4aa8;">
+    <div class="contact-grid">
+      <!-- Contact Details Card -->
+      <div class="contact-card">
+        <h3>Reach Us Through</h3>
+        <p>
           We would love to hear from you. Our official communication channels are:
         </p>
-
         <p><strong>Postal Address:</strong> 647-90400</p>
         <p><strong>Phone & Fax:</strong> 0722242293</p>
         <p><strong>Email:</strong> musuani.sec@gmail.com</p>
-        <p><strong>Office Hours:</strong> Monday–Friday: 8:00 AM – 5:00 PM</p>
+        <p><strong>Office Hours:</strong> Monday–Friday: 8:00 AM – 5:00 PM</p>
+        <p style="margin-top:20px; font-style:italic;">
+          "The shortest distance between two people is communication."
+        </p>
 
-        <p style="margin-top:20px; font-style:italic; color:#555;">"The shortest distance between two people is communication." — Anonymous</p>
-
-        <h2 style="color:#0a2a52; margin-bottom:20px; font-size:28px;">Musuani Senior School Details</h2>
-
-    <p style="line-height:1.7; color:#3f4aa8;">
-      <strong>NEMIS Code:</strong> KSBL<br>
-      <strong>KNEC Code:</strong> 13339108<br>
-      <strong>IPPD Code:</strong> 147014103037<br>
-      <strong>Registration No:</strong> 15S300012248
-    </p>
-
-    <p style="line-height:1.7; color:#3f4aa8;">
-      <strong>Location Coordinates:</strong><br>
-      Latitude: 1.007<br>
-      Longitude: 36.0062<br>
-      Altitude: 1183 m
-    </p>
+        <h3 style="color:var(--primary-color); margin-top:25px; margin-bottom:15px;">School Details</h3>
+        <p><strong>NEMIS Code:</strong> KSBL</p>
+        <p><strong>KNEC Code:</strong> 13339108</p>
+        <p><strong>IPPD Code:</strong> 147014103037</p>
+        <p><strong>Registration No:</strong> 15S300012248</p>
       </div>
 
-
-      <!-- CARD 2: Contact Form -->
-      <div style="
-          background:#ffffff;
-          padding:25px;
-          border-radius:12px;
-          box-shadow:0 6px 12px rgba(0,0,0,0.1);
-      ">
-        <h3 style="color:#0a2a52; margin-bottom:15px;">Get in Touch</h3>
-        <p style="line-height:1.7; color:#3f4aa8;">
+      <!-- Contact Form Card -->
+      <div class="contact-card">
+        <h3>Get in Touch</h3>
+        <p>
           We're here to help. Fill out the form below and we'll get back to you as soon as possible.
         </p>
 
-        <form action="/submit" method="post" enctype="multipart/form-data" style="display:flex; flex-direction:column; gap:15px;">
-          <input type="text" name="fullName" placeholder="Full Name *" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
-          <input type="text" name="subject" placeholder="Subject/Topic *" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
-          <textarea name="message" placeholder="Message *" required style="padding:10px; border-radius:5px; border:1px solid #ccc; height:120px;"></textarea>
+        <form action="/submit" method="post" enctype="multipart/form-data" onsubmit="return FormValidator.validateForm(this) !== false;">
+          <div class="form-group">
+            <input type="text" name="fullName" placeholder="Full Name *" required>
+          </div>
 
-          <label style="font-size:14px; color:#555;">
-            Attachments (PDF, DOC, JPG, PNG, max 10MB)
-            <input type="file" name="attachment" style="margin-top:5px;">
-          </label>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address">
+          </div>
 
-          <label style="font-size:14px; color:#555;">
-            How would you like us to respond? You can select multiple options:
-            <br>
-            <input type="checkbox" name="response" value="email"> Email
-            <input type="checkbox" name="response" value="sms"> SMS
-            <input type="checkbox" name="response" value="phone"> Phone Call
-          </label>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject/Topic *" required>
+          </div>
 
-          <label style="font-size:13px; color:#777;">
-            <input type="checkbox" name="consent" required> I consent to the collection and processing of my data to best respond to my queries. My data may also be used to improve our service quality.
-          </label>
+          <div class="form-group">
+            <textarea name="message" placeholder="Message *" required></textarea>
+          </div>
 
-          <button type="submit" style="
-              background:#0a2a52;
-              color:#ffffff;
-              padding:12px;
-              font-size:16px;
-              border:none;
-              border-radius:6px;
-              cursor:pointer;
-              transition:0.3s;
-          " onmouseover="this.style.background='#132f6b';" onmouseout="this.style.background='#0a2a52';">
-            Send Message
-          </button>
+          <div class="form-group">
+            <label>
+              Attachments (PDF, DOC, JPG, PNG, max 10MB)
+              <input type="file" name="attachment" style="margin-top:5px;">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label><strong>How would you like us to respond?</strong></label>
+            <div class="form-check">
+              <input type="checkbox" name="response" value="email" id="email">
+              <label for="email">Email</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="response" value="sms" id="sms">
+              <label for="sms">SMS</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="response" value="phone" id="phone">
+              <label for="phone">Phone Call</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label style="font-size:13px;">
+              <input type="checkbox" name="consent" required>
+              I consent to the collection and processing of my data to best respond to my queries.
+            </label>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
         </form>
       </div>
-
     </div>
 
-    <!-- CARD 3: Directions / Notes -->
-    <div style="
-        background:#ffffff;
-        padding:25px;
-        border-radius:12px;
-        box-shadow:0 6px 12px rgba(0,0,0,0.1);
-        margin-top:40px;
-        text-align:center;
-    ">
-      <h3 style="color:#0a2a52; margin-bottom:15px;">Directions to Our School</h3>
-      <p style="line-height:1.7; color:#3f4aa8;">
+    <!-- Map Section -->
+    <div style="background:#ffffff; padding:25px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); margin-top:40px; text-align:center;">
+      <h3 style="color:var(--primary-color); margin-bottom:15px;">Directions to Our School</h3>
+      <p style="line-height:1.7; color:var(--secondary-color); margin-bottom:20px;">
         Musuani Senior School is located in Mwingi West Sub-county, Kitui County, Kenya.
       </p>
-       <div style="
-        background:#ffffff;
-        padding:10px;
-        border-radius:12px;
-        box-shadow:0 6px 12px rgba(0,0,0,0.1);
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    ">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.202109876646!2d38.00333107496532!3d-1.0070039989832953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18242b809e92a917%3A0x9653f5fd50a26a2c!2sMusuani%20Senior%20school!5e0!3m2!1sen!2ske!4v1768074994920!5m2!1sen!2ske" 
-        width="100%" 
-        height="350" 
-        style="border:0; border-radius:12px;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.202109876646!2d38.00333107496532!3d-1.0070039989832953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18242b809e92a917%3A0x123456789!2sMusuani%20Senior%20School!5e0!3m2!1sen!2ske!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
-    </div>
-
   </section>
 
-  <!-- ================= FOOTER ================= -->
-  <footer style="background:#0a2a52; color:#ffffff; padding:40px 20px 20px;">
-    <div style="
-        max-width:1200px;
-        margin:0 auto;
-        display:flex;
-        justify-content:space-between;
-        align-items:flex-start;
-        flex-wrap:wrap;
-        gap:40px;
-    ">
-
-      <!-- School Info -->
-      <div style="flex:1; min-width:200px;">
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
         <h3>Musuani Senior School</h3>
-        <p><strong>School Motto:</strong> Shine and Reflect</p>
-        <p><strong>Mission:</strong> To become a model center for holistic development of the learner through self-discipline and provision of quality education.</p>
-        <p><strong>Vision:</strong> A model centre of excellence for holistic development</p>
-        <p><strong>Core Values:</strong> Integrity, Teamwork, Professionalism, Transparency, Accountability, Fidelity, Fairness, Hardwork, Commitment, Efficiency, Continual Improvement, Courtesy, Respect for individual differences, Innovation & Creativity</p>
+        <p><strong>Motto:</strong> Shine and Reflect</p>
+        <p><strong>Mission:</strong> To become a model center for holistic development.</p>
       </div>
-
-      <!-- Quick Links -->
-      <div style="flex:1; min-width:200px;">
+      <div>
         <h3>Quick Links</h3>
-        <ul style="list-style:none; padding:0; line-height:1.9;">
-          <li><a href="https://kuccps.net" style="color:#ffffff; text-decoration:none;">KUCCPS</a></li>
-          <li><a href="https://www.knec.ac.ke" style="color:#ffffff; text-decoration:none;">KNEC Portal</a></li>
-          <li><a href="https://www.tsc.go.ke" style="color:#ffffff; text-decoration:none;">TSC Portal</a></li>
-          <li><a href="index.html" style="color:#ffffff; text-decoration:none;">Home</a></li>
-          <li><a href="contact_details.html" style="color:#ffffff; text-decoration:none;">Contact Us</a></li>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="https://kuccps.net" target="_blank">KUCCPS</a></li>
+          <li><a href="https://www.knec.ac.ke" target="_blank">KNEC</a></li>
+          <li><a href="https://www.tsc.go.ke" target="_blank">TSC</a></li>
+          <li><a href="index.html">Home</a></li>
         </ul>
       </div>
-
-      <!-- Contact Info -->
-      <div style="flex:1; min-width:200px;">
-        <h3>Contact Information</h3>
-        <p>Address:647-90400</p>
-        <p>Email: musuani.sec@gmail.com</p>
-        <p>Phone: 0722242293</p>
+      <div>
+        <h3>Contact</h3>
+        <p>📞 0722242293</p>
+        <p>📧 musuani.sec@gmail.com</p>
+        <p>📍 Mwingi West, Kitui</p>
       </div>
-
     </div>
-
-    <div style="border-top:1px solid rgba(255,255,255,0.3); text-align:center; padding:15px; font-size:14px; margin-top:20px;">
-      © 2026 Musuani Senior School. All rights reserved.<br>
-      Powered by <a href="mailto:mwangiemmah2023@gmail.com" style="color:#ffffff; text-decoration:none; font-weight:600;">Service Provider</a>
+    <div style="border-top: 1px solid rgba(255,255,255,0.3); text-align: center; padding: 15px; font-size: 14px;">
+      © 2026 Musuani Senior School. All rights reserved.
     </div>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom Scripts -->
+  <script src="js/form-validation.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
-
