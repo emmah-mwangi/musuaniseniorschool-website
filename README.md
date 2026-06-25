@@ -442,7 +442,7 @@ For frontend-only deployment:
 
    Contributors
 
--  Mwangi Emma  - Developer & Website Manager
+-  Mwangi Emmah  - Developer & Website Manager
   - Email: mwangiemmah2023@gmail.com
   - GitHub: [emmah-mwangi](https://github.com/emmah-mwangi)
 
